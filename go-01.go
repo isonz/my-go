@@ -1,3 +1,6 @@
+/**
+入门
+*/
 //必须要有 main 包，否则会报错误：cannot run non-main package
 package main
 // package my_go	// 看底部的解释
