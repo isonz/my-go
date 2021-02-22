@@ -5,6 +5,8 @@ import (
 	"time"
 )
 
+const ABC = "abc"		//可以不使用
+
 func main()  {
 	var age int		//变量的声明必须使用空格隔开
 	name := "Ken"	//使用冒号定义字符串变量并赋值
@@ -14,6 +16,7 @@ func main()  {
 	//这种不带声明格式的只能在函数体中出现
 	g, h := 123, "hello"
 
+	println(ABC)
 	println(age)
 	println(name)
 	println(b, c)
@@ -26,4 +29,5 @@ func main()  {
 	var endDate=time.Now()
 	var targetUrl=fmt.Sprintf("Code=%d&endDate=%s", stockCode, endDate)
 	println(targetUrl)
+
 }
