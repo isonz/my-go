@@ -1,7 +1,7 @@
 /**
 入门
 */
-//必须要有 main 包，否则会报错误：cannot run non-main package
+//有 main 函数时必须要有 main 包，否则会报错误：cannot run non-main package
 package main
 // package my_go	// 看底部的解释
 
@@ -9,6 +9,13 @@ import (
 	"runtime"
 	"unicode/utf8"
 ) // 导入外包
+
+
+// 1、init 函数会在main 函数之前执行
+// 2、go 程序会更具导入包的顺序依次执行每一个包的init 函数
+func init(){
+	println("main -- init ")
+}
 
 /* 这是程序入口函数 */
 func main()  {		// { 不能单独放在一行
@@ -25,6 +32,10 @@ func main()  {		// { 不能单独放在一行
 	println('A')	//  打印出65，ASCII 码值
 	// println('AB')	//  报错，不能打印2个 rune
 }
+
+/**
+nil 在概念上和其它语言的 null、None、nil、NULL一样，都指代零值或空值。
+ */
 
 /**
 当标识符（包括常量、变量、类型、函数名、结构字段等等）以一个大写字母开头，如：Group1，
